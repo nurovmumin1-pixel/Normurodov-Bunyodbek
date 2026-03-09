@@ -1,0 +1,162 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #0f172a;
+    color: white;
+}
+
+/* SIDEBAR */
+.sidebar {
+    position: fixed;
+    width: 220px;
+    height: 100%;
+    background: #020617;
+    padding-top: 20px;
+}
+
+.sidebar h2 {
+    text-align: center;
+}
+
+.sidebar a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    background: #1e293b;
+}
+
+.main {
+    margin-left: 220px;
+    padding: 20px;
+}
+
+.page {
+    display: none;
+}
+
+/* VIDEOLAR */
+video {
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    border-radius: 25px;
+}
+
+/* SONG LIST */
+.songs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.song {
+    background: #1e293b;
+    padding: 15px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 120px;
+    text-align: center;
+}
+
+.song:hover {
+    background: #334155;
+}
+
+/* PLAYER */
+#player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #020617;
+    padding: 30px;
+    text-align: center;
+    display: none;
+}
+
+#cover {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    animation: spin 6s linear infinite, glow 4s infinite;
+    animation-play-state: paused;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 40px red;
+    }
+
+    25% {
+        box-shadow: 0 0 40px blue;
+    }
+
+    50% {
+        box-shadow: 0 0 40px purple;
+    }
+
+    75% {
+        box-shadow: 0 0 40px yellow;
+    }
+
+    100% {
+        box-shadow: 0 0 40px red;
+    }
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+button {
+    font-size: 20px;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    background: #1e293b;
+    color: white;
+    border-radius: 8px;
+}
+
+/* ARTIST RASMLARI */
+#artist img {
+    width: 100%;
+    max-width: 300px;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+/* 📱 TELEFON UCHUN */
+@media (max-width:768px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .sidebar h2 {
+        display: none;
+    }
+
+    .main {
+        margin-left: 0;
+    }
+}
